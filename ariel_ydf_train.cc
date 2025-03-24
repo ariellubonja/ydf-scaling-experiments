@@ -20,7 +20,7 @@ absl::Status TrainRandomForest(const std::string& csv_path,
   {
     // Infers the dataspec from the CSV data. If your CSV is large, you might want
     // to limit "max_num_values" in the inference arguments below for speed.
-    dataset::CreateDataSpecOptions options;
+    dataset::proto::CreateDataSpecOptions options;
     options.set_detect_schema(true);
     options.set_max_num_values(1000);  // Just as an example, adjust if needed.
     std::cout << "Inferring DataSpec from CSV: " << csv_path << std::endl;
@@ -50,7 +50,7 @@ absl::Status TrainRandomForest(const std::string& csv_path,
 
   // Example of setting random forest hyperparameters:
   auto& rf_config = *train_config.MutableExtension(
-                        random_forest::proto::random_forest_config);
+    model::random_forest::proto::random_forest_config);
   rf_config.set_num_trees(1000);
   rf_config.set_maximum_depth(-1);  // -1 means unlimited
   rf_config.set_bootstrap_training_dataset(true);
@@ -67,7 +67,7 @@ absl::Status TrainRandomForest(const std::string& csv_path,
                                  std::string(get_learner_status.message()));
     }
     // Optionally set deployment (resources) configuration:
-    learner->set_deployment(deployment_config);
+    learner->SetDeploymentConfig(deployment_config);
   }
 
   // 4) Train the model from disk-based dataset with the given dataspec.
@@ -82,7 +82,7 @@ absl::Status TrainRandomForest(const std::string& csv_path,
 
   // 5) (Optional) Validate or interpret your model
   std::cout << "Model trained. Summary:\n";
-  std::cout << model->description() << std::endl;
+  std::cout << model->ShortDescription() << std::endl;
 
   // 6) Save the model to disk in the chosen directory
   {
