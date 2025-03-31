@@ -339,3 +339,93 @@
   train_time mean=92.8266s, std=0.1936
   inference_time mean=3.4887s, std=0.0208
   accuracy mean=0.508, std=0.003
+
+(n=16384, d=512):
+  train_time mean=94.9205s, std=0.1941
+  inference_time mean=5.5635s, std=0.0505
+  accuracy mean=0.500, std=0.007
+
+(n=16384, d=1024):
+  train_time mean=98.8464s, std=0.2698
+  inference_time mean=10.6959s, std=0.0182
+  accuracy mean=0.496, std=0.004
+
+(n=16384, d=2048):
+  train_time mean=109.6450s, std=0.5953
+  inference_time mean=24.7145s, std=2.5636
+  accuracy mean=0.502, std=0.005
+
+(n=16384, d=4096):
+  train_time mean=218.7441s, std=1.9032
+  inference_time mean=53.9941s, std=0.6500
+  accuracy mean=0.504, std=0.005
+
+(n=16384, d=8192):
+  train_time mean=541.0641s, std=6.1425
+  inference_time mean=109.4274s, std=1.2901
+  accuracy mean=0.498, std=0.003
+
+(n=16384, d=16384):
+  train_time mean=1270.5937s, std=35.2482
+  inference_time mean=213.8189s, std=0.7928
+  accuracy mean=0.505, std=0.002
+
+(n=16384, d=32768):
+  train_time mean=2168.7870s, std=18.5698
+  inference_time mean=405.4929s, std=3.1255
+  accuracy mean=0.507, std=0.006
+
+(n=16384, d=65536):
+  train_time mean=4351.6738s, std=14.8713
+  inference_time mean=817.1844s, std=6.3935
+  accuracy mean=0.500, std=0.005
+
+(n=16384, d=131072):
+  train_time mean=9160.5711s, std=137.6884
+  inference_time mean=1647.0950s, std=38.8759
+  accuracy mean=0.498, std=0.004
+
+(n=32768, d=128):
+  train_time mean=177.3638s, std=0.5971
+  inference_time mean=4.0697s, std=0.0749
+  accuracy mean=0.500, std=0.004
+
+(n=32768, d=256):
+  train_time mean=179.9769s, std=0.4155
+  inference_time mean=5.8958s, std=0.0258
+  accuracy mean=0.501, std=0.004
+
+(n=32768, d=512):
+  train_time mean=185.0673s, std=0.8458
+  inference_time mean=9.8823s, std=0.1643
+  accuracy mean=0.500, std=0.005
+
+(n=32768, d=1024):
+  train_time mean=192.2290s, std=0.4750
+  inference_time mean=24.0507s, std=2.4975
+  accuracy mean=0.500, std=0.002
+
+(n=32768, d=2048):
+  train_time mean=217.1919s, std=2.1069
+  inference_time mean=42.9112s, std=5.6313
+  accuracy mean=0.500, std=0.003
+
+(n=32768, d=4096):
+  train_time mean=382.9479s, std=4.9757
+  inference_time mean=97.4407s, std=2.3674
+  accuracy mean=0.499, std=0.002
+
+(n=32768, d=8192):
+  train_time mean=983.1708s, std=20.5873
+  inference_time mean=192.9833s, std=5.9525
+  accuracy mean=0.502, std=0.004
+
+(n=32768, d=16384):
+  train_time mean=2170.7735s, std=19.3707
+  inference_time mean=370.5931s, std=5.0195
+  accuracy mean=0.501, std=0.009
+
+(n=32768, d=32768):
+  train_time mean=4205.2398s, std=67.7070
+  inference_time mean=743.3290s, std=5.7531
+  accuracy mean=0.502, std=0.004
