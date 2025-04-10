@@ -2,4 +2,4 @@ venv
 .DS_Store
 .ipynb_checkpoints/
 .idea/
-**/WiseCondorX.Wise-1.csv
+data/WiseCondorX.Wise-1.csv
