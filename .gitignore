@@ -1,5 +1,6 @@
 venv
 .DS_Store
-.ipynb_checkpoints/
+**/.ipynb_checkpoints/
 .idea/
 data/WiseCondorX.Wise-1.csv
+oblique-exp-env/
