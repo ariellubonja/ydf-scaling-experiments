@@ -1,26 +1,27 @@
 import numpy as np
-from sklearn import train_test_split
+from sklearn.model_selection import train_test_split
+import pandas as pd
 
 random_state = 42
 
-n = 1024
-d = 512
+save_path = "../data/random_csvs/"
+
+N = [512]
+D = [32, 64, 128, 256, 512, 1024]#, 2048, 4096, 8192]
 
 
-
-X = np.random.randn(n, d)
-y = np.random.randint(2, size=n)
-
-
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.3, random_state=random_state, stratify=y
-)
-
-df_train = X_train
-df_test = X_test
+for n in N:
+    for d in D:
+        X = np.random.randn(n, d)
+        y = np.random.randint(2, size=n)
 
 
-df_train.to_csv("X_train.csv", index=False)
-df_test.to_csv("X_test.csv", index=False)
-y_train.to_csv("y_train.csv", index=False)
-y_test.to_csv("y_test.csv", index=False)
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.3, random_state=random_state, stratify=y
+        )
+
+
+        pd.DataFrame(X_train).to_csv(save_path+"X_train_n="+str(n)+"_d="+str(d)+".csv", index=False)
+        pd.DataFrame(X_test).to_csv(save_path+"X_test_n="+str(n)+"_d="+str(d)+".csv", index=False)
+        pd.DataFrame(y_train).to_csv(save_path+"y_train_n="+str(n)+"_d="+str(d)+".csv", index=False)
+        pd.DataFrame(y_test).to_csv(save_path+"y_test_n="+str(n)+"_d="+str(d)+".csv", index=False)

@@ -4,3 +4,4 @@ venv
 .idea/
 data/WiseCondorX.Wise-1.csv
 oblique-exp-env/
+data/random_csvs/
